@@ -1,0 +1,45 @@
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+on_event = 'BufReadPre'
+hook_source = '''
+    let g:indentLine_enabled = 1
+    let g:indentLine_char='┆'
+    let g:indentLine_fileTypeExclude = ['defx', 'denite','startify','tagbar','vista_kind','vista','coc-explorer','dashboard']
+    let g:indentLine_concealcursor = 'niv'
+    let g:indentLine_showFirstIndentLevel =1
+'''
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+depends = 'context_filetype.vim'
+on_map = { nx = '<Plug>' }
+
+[[plugins]]
+repo = 'ludovicchabant/vim-gutentags'
+if = 'executable("ctags")'
+on_event = ['BufReadPost', 'BufWritePost']
+hook_source = '''
+    let g:gutentags_cache_dir = $DATA_PATH . '/tags'
+    let g:gutentags_project_root = ['.root', '.git', '.svn', '.hg', '.project','go.mod','/usr/local']
+    let g:gutentags_generate_on_write = 1
+    let g:gutentags_generate_on_missing = 1
+    let g:gutentags_generate_on_new = 0
+    let g:gutentags_exclude_filetypes = [ 'defx', 'denite', 'vista', 'magit' ]
+    let g:gutentags_ctags_extra_args = ['--output-format=e-ctags']
+    let g:gutentags_ctags_exclude = ['*.json', '*.js', '*.ts', '*.jsx', '*.css', '*.less', '*.sass', '*.dart', 'node_modules', 'dist', 'vendor']
+'''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_event = 'InsertEnter'
+on_ft = [ 'html','css','javascript','javascriptreact','vue','typescript','typescriptreact' ]
+hook_source = '''
+    let g:user_emmet_complete_tag = 0
+    let g:user_emmet_install_global = 0
+    let g:user_emmet_install_command = 0
+    let g:user_emmet_mode = 'i'
+'''
