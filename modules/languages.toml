@@ -21,6 +21,11 @@ repo = 'fatih/vim-go'
 on_ft = ['go','gomod']
 hook_add = '''
 	nnoremap gcg :GoAuToComment<CR>
+	let g:go_highlight_functions = 1
+	let g:go_highlight_methods = 1
+	let g:go_highlight_structs = 1
+	let g:go_highlight_operators = 1
+	let g:go_highlight_build_constraints = 1
 '''
 hook_source = '''
 	call coc#config('languageserver', {

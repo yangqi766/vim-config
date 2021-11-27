@@ -164,16 +164,11 @@
 	"java.configuration.runtimes": [
 	  {
 	    "name": "JavaSE-1.11",
-	    "path": "~/.cache/jdk-11",
+	    "path": "/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/",
 	  },
 	  {
 	    "name": "JavaSE-11",
-	    "path": "~/.cache/jdk-11",
-	  },
-	  {
-	    "name": "JavaSE-14",
-	    "path": "~/.cache/jdk-14",
-	    "default": true
+	    "path": "/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/",
 	  },
 	],
 	"python.languageServer": "Microsoft",
@@ -236,7 +231,7 @@
 							"enabled": true
 						},
 						"yapf": {
-							"enabled": false
+							"enabled": true
 						}
 					}
 				}
