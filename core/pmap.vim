@@ -6,6 +6,7 @@ nnoremap  ]b :<C-u>bp<CR>
 nnoremap  [b :<C-u>bn<CR>
 nnoremap <silent> <Leader>b :Bonly<CR>
 nnoremap <silent> <Leader>q :Bw<CR>
+nnoremap <silent> <localleader>q :q<CR>
 nmap <leader>1 <Plug>BuffetSwitch(1)
 nmap <leader>2 <Plug>BuffetSwitch(2)
 nmap <leader>3 <Plug>BuffetSwitch(3)
