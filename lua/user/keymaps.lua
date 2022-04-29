@@ -40,6 +40,8 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Normal
+keymap("n", "<C-e>", "$", opts)
+keymap("n", "<C-a>", "0", opts)
 
 -- Insert --
 keymap("i", "jk", "<ESC>", opts)
