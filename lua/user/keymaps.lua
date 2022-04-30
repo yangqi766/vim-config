@@ -8,7 +8,7 @@ local keymap = vim.api.nvim_set_keymap
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = ";"
 
 -- Modes
 --   normal_mode = "n",
@@ -34,6 +34,14 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>", opts)
+keymap("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>", opts)
+keymap("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>", opts)
+keymap("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>", opts)
+keymap("n", "<leader>5", ":BufferLineGoToBuffer 5<CR>", opts)
+keymap("n", "<leader>6", ":BufferLineGoToBuffer 6<CR>", opts)
+keymap("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>", opts)
+keymap("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -42,6 +50,9 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Normal
 keymap("n", "<C-e>", "$", opts)
 keymap("n", "<C-a>", "0", opts)
+keymap("n", "j", "<Plug>(accelerated_jk_j)", {})
+keymap("n", "k", "<Plug>(accelerated_jk_k)", {})
+
 
 -- Insert --
 keymap("i", "jk", "<ESC>", opts)
@@ -49,10 +60,11 @@ keymap("i", "<C-h>", "<Left>", opts)
 keymap("i", "<C-l>", "<Right>", opts)
 keymap("i", "<C-k>", "<Up>", opts)
 keymap("i", "<C-j>", "<Down>", opts)
-keymap("i", "<C-o>", "<ESC>o", opts)
-keymap("i", "<C-a>", "<ESC>I", opts)
-keymap("i", "<C-e>", "<ESC>A", opts)
-keymap("i", "<C-d>", "<ESC>lcl", opts)
+keymap("i", "<C-o>", "<ESC>o", opts)      -- switch to next new line
+keymap("i", "<C-a>", "<ESC>I", opts)      -- jump to begin
+keymap("i", "<C-e>", "<ESC>A", opts)      -- jump to end
+keymap("i", "<C-d>", "<ESC>lcl", opts)    -- delete one char
+-- keymap("i", "<C-z>", "<ECS>ui", opts)  -- how to map <C-z> like back off
 
 -- Visual --
 -- Stay in indent mode
